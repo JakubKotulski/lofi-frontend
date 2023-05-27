@@ -4,6 +4,7 @@
 
 .custom-form {
   border: solid 1px #06d106;
+  border-radius: 15px;
   padding: 75px;
 }
 
