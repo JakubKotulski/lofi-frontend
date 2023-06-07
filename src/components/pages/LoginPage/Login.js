@@ -2,8 +2,12 @@ import { useForm } from "react-hook-form";
 import { Form, FloatingLabel, Button } from "react-bootstrap";
 import "./Login.css";
 import { useState } from "react";
+import axios from "axios";
+import { backendUrl } from "../../../config";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -26,6 +30,22 @@ const Login = () => {
   const getEmail = (e) => setEmail(e.target.value);
   const getPassword = (e) => setPassword(e.target.value);
 
+  const signUp = () => {
+    axios({
+      method: "POST",
+      url: `${backendUrl}/user/login`,
+      data: {
+        email: email,
+        password: password,
+      },
+    }).then((res) => {
+      console.log(res.data);
+      localStorage.setItem("token", res.data.token);
+      navigate("/main");
+      window.location.reload();
+    });
+  };
+
   return (
     <div className="custom-container">
       <Form className="custom-form" autoComplete="off" onSubmit={handleSubmit((data) => {})}>
@@ -39,7 +59,7 @@ const Login = () => {
           <small className="text-error">{errors.password && errors.password.message}</small>
         </FloatingLabel>
         <Form.Group className="submit-center submit-group" controlId="formGroupSubmit">
-          <Button type="submit" className="custom-button neon-border">
+          <Button type="submit" className="custom-button neon-border" onClick={signUp}>
             <span className="neon-button-text">Sign in</span>
           </Button>
         </Form.Group>
