@@ -1,0 +1,17 @@
+.main-page-container {
+  width: 100%;
+  display: flex;
+  height: max-content;
+}
+
+.player {
+  width: 30%;
+  background-color: black;
+  height: 500px;
+}
+
+.content-side {
+  width: 70%;
+  background-color: #212529;
+  height: 500px;
+}

@@ -1,0 +1,13 @@
+.icon-box{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: #06d106 solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-style {
+  color: #06d106;
+}

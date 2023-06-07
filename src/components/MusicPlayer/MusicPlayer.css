@@ -1,0 +1,24 @@
+.flex-box-player {
+  width: 90%;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.option-box {
+  padding: 15px 0px 15px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-box {
+  padding: 15px 0px 15px 0px;
+  width: 100%;
+}
+
+.img-box img {
+  width: 100%;
+  border-radius: 15px;
+
+}

@@ -59,7 +59,7 @@ const Login = () => {
           <small className="text-error">{errors.password && errors.password.message}</small>
         </FloatingLabel>
         <Form.Group className="submit-center submit-group" controlId="formGroupSubmit">
-          <Button type="submit" className="custom-button neon-border" onClick={signUp}>
+          <Button type="submit" className="custom-button neon-border" onClick={() => signUp()}>
             <span className="neon-button-text">Sign in</span>
           </Button>
         </Form.Group>
