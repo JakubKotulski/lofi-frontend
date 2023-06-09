@@ -1,0 +1,26 @@
+.search-bar-box {
+  padding-top: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.search-bar-box input {
+  border-radius: 8px;
+  border: solid 1px #be00fe;
+  background-color: #212529;
+  color: white;
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(190, 0, 254, 1);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(190, 0, 254, 1);
+  box-shadow: 0px 0px 24px 0px rgba(190, 0, 254, 1);
+  padding: 5px 100px 5px 20px;
+}
+
+.search-bar-box input:focus-visible {
+  border-radius: 8px;
+  border: solid 1px #be00fe;
+  background-color: #212529;
+  color: white;
+  outline: #be00fe;
+}
